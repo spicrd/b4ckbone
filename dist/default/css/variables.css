@@ -1,0 +1,19 @@
+.b4ckbone {
+    --content-max-width: 80rem;
+    --full: 1rem;
+    --breakout: 0;
+    --popout: 0;
+}
+
+@media (min-width: 768px) {
+    .b4ckbone {
+        --breakout: max(1rem, 6vw);
+        --full: clamp(1rem, 6vw, 5rem);
+    }
+}
+
+@media (min-width: 1024px) {
+    .b4ckbone {
+        --popout: max(1rem, 6vw);
+    }
+}

@@ -1,0 +1,82 @@
+.b4ckbone > div {
+    --popout-breakout: calc(var(--popout) + var(--breakout));
+    --popout-breakout-edge: calc(var(--popout) + var(--breakout) + var(--edge));
+    --remaining-space: calc((100% - var(--left-spacing, 0rem) - var(--right-spacing, 0rem) - var(--content-max-width)) / 2);
+    --b4ckbone-spacing-left: max(var(--left-spacing, 0rem), var(--left-spacing, 0rem) + var(--remaining-space));
+    --b4ckbone-spacing-right: max(var(--right-spacing, 0rem), var(--right-spacing, 0rem) + var(--remaining-space));
+}
+
+.b4ckbone.centered > *,
+.b4ckbone > .centered {
+    padding-left: var(--b4ckbone-spacing-left) !important;
+    padding-right: var(--b4ckbone-spacing-right) !important;
+}
+
+.b4ckbone > .b4ckbone-popout {
+    --left-spacing: var(--popout);
+    --right-spacing: var(--popout);
+}
+
+.b4ckbone > .b4ckbone-breakout {
+    --left-spacing: var(--popout-breakout);
+    --right-spacing: var(--popout-breakout);
+}
+
+.b4ckbone > .b4ckbone-edge {
+    --left-spacing: var(--popout-breakout-edge);
+    --right-spacing: var(--popout-breakout-edge);
+}
+
+.b4ckbone > .b4ckbone-start-edge.b4ckbone-end-content {
+    --left-spacing: var(--popout-breakout-edge);
+}
+
+.b4ckbone > .b4ckbone-start-edge.b4ckbone-end-popout {
+    --left-spacing: var(--popout-breakout-edge);
+    --right-spacing: var(--popout);
+}
+
+.b4ckbone > .b4ckbone-start-edge.b4ckbone-end-breakout {
+    --left-spacing: var(--popout-breakout-edge);
+    --right-spacing: var(--popout-breakout);
+}
+
+.b4ckbone > .b4ckbone-start-breakout.b4ckbone-end-edge {
+    --left-spacing: var(--popout-breakout);
+    --right-spacing: var(--popout-breakout-edge);
+}
+
+.b4ckbone > .b4ckbone-start-popout.b4ckbone-end-edge {
+    --left-spacing: var(--popout);
+    --right-spacing: var(--popout-breakout-edge);
+}
+
+.b4ckbone > .b4ckbone-start-content.b4ckbone-end-edge {
+    --right-spacing: var(--popout-breakout-edge);
+}
+
+.b4ckbone > .b4ckbone-start-breakout.b4ckbone-end-content {
+    --left-spacing: var(--popout-breakout);
+}
+
+.b4ckbone > .b4ckbone-start-breakout.b4ckbone-end-popout {
+    --left-spacing: var(--popout-breakout);
+    --right-spacing: var(--popout);
+}
+
+.b4ckbone > .b4ckbone-start-popout.b4ckbone-end-breakout {
+    --left-spacing: var(--popout);
+    --right-spacing: var(--popout-breakout);
+}
+
+.b4ckbone > .b4ckbone-start-content.b4ckbone-end-breakout {
+    --right-spacing: var(--popout-breakout);
+}
+
+.b4ckbone > .b4ckbone-start-popout.b4ckbone-end-content {
+    --left-spacing: var(--popout);
+}
+
+.b4ckbone > .b4ckbone-start-content.b4ckbone-end-popout {
+    --right-spacing: var(--popout);
+}
