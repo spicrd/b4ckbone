@@ -1,43 +1,40 @@
 .backbone {
-    --gap: 1rem;
-    --content: calc(100% - var(--gap) * 2);
-    --popout: 0;
+    --content-max-width: 80rem;
+    --full: 1rem;
     --breakout: 0;
-    --full: var(--gap);
+    --popout: 0;
 }
 
 @media (min-width: 768px) {
     .backbone {
-        --gap: clamp(1rem, 6vw, 5rem);
-        --content: min(clamp(50rem, 75vw, 80rem), 100% - var(--gap) * 2);
-        --popout: minmax(1rem, 100%);
-        --breakout: minmax(1rem, 100%);
-        --full: var(--gap);
+        --breakout: max(1rem, 6vw);
+        --full: clamp(1rem, 6vw, 5rem);
+    }
+}
+
+@media (min-width: 1024px) {
+    .backbone {
+        --popout: max(1rem, 6vw);
     }
 }
 
 .backbone {
     display: grid;
-    grid-template-columns:
-    [full-start]
-    var(--full)
-    [breakout-start]
-    var(--breakout)
-    [popout-start]
-    var(--popout)
-    [content-start]
-    var(--content)
-    [content-end]
-    var(--popout)
-    [popout-end]
-    var(--breakout)
-    [breakout-end]
-    var(--full)
-    [full-end];
+    grid-template-columns: 
+    [full-start] var(--full)
+    [breakout-start] var(--breakout)
+    [popout-start] var(--popout)
+    [content-start] 1fr [content-end]
+    var(--popout) [popout-end]
+    var(--breakout) [breakout-end]
+    var(--full) [full-end];
 }
 
 .backbone > :not(.backbone-start-content, .backbone-end-content, .backbone-popout, .backbone-start-popout, .backbone-end-popout, .backbone-breakout, .backbone-start-breakout, .backbone-end-breakout, .backbone-full, .backbone-start-full, .backbone-end-full) {
     grid-column: content;
+    justify-self: center;
+    width: 100%;
+    max-width: var(--content-max-width);
 }
 
 .backbone > .backbone-start-content {

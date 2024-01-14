@@ -1,0 +1,82 @@
+.backbone > div {
+    --popout-breakout: calc(var(--popout) + var(--breakout));
+    --popout-breakout-full: calc(var(--popout) + var(--breakout) + var(--full));
+    --remaining-space: calc((100% - var(--left-spacing, 0rem) - var(--right-spacing, 0rem) - var(--content-max-width)) / 2);
+    --backbone-spacing-left: max(var(--left-spacing, 0rem), var(--left-spacing, 0rem) + var(--remaining-space));
+    --backbone-spacing-right: max(var(--right-spacing, 0rem), var(--right-spacing, 0rem) + var(--remaining-space));
+}
+
+.backbone.centered > *,
+.backbone > .centered {
+    padding-left: var(--backbone-spacing-left) !important;
+    padding-right: var(--backbone-spacing-right) !important;
+}
+
+.backbone > .backbone-popout {
+    --left-spacing: var(--popout);
+    --right-spacing: var(--popout);
+}
+
+.backbone > .backbone-breakout {
+    --left-spacing: var(--popout-breakout);
+    --right-spacing: var(--popout-breakout);
+}
+
+.backbone > .backbone-full {
+    --left-spacing: var(--popout-breakout-full);
+    --right-spacing: var(--popout-breakout-full);
+}
+
+.backbone > .backbone-start-full.backbone-end-content {
+    --left-spacing: var(--popout-breakout-full);
+}
+
+.backbone > .backbone-start-full.backbone-end-popout {
+    --left-spacing: var(--popout-breakout-full);
+    --right-spacing: var(--popout);
+}
+
+.backbone > .backbone-start-full.backbone-end-breakout {
+    --left-spacing: var(--popout-breakout-full);
+    --right-spacing: var(--popout-breakout);
+}
+
+.backbone > .backbone-start-breakout.backbone-end-full {
+    --left-spacing: var(--popout-breakout);
+    --right-spacing: var(--popout-breakout-full);
+}
+
+.backbone > .backbone-start-popout.backbone-end-full {
+    --left-spacing: var(--popout);
+    --right-spacing: var(--popout-breakout-full);
+}
+
+.backbone > .backbone-start-content.backbone-end-full {
+    --right-spacing: var(--popout-breakout-full);
+}
+
+.backbone > .backbone-start-breakout.backbone-end-content {
+    --left-spacing: var(--popout-breakout);
+}
+
+.backbone > .backbone-start-breakout.backbone-end-popout {
+    --left-spacing: var(--popout-breakout);
+    --right-spacing: var(--popout);
+}
+
+.backbone > .backbone-start-popout.backbone-end-breakout {
+    --left-spacing: var(--popout);
+    --right-spacing: var(--popout-breakout);
+}
+
+.backbone > .backbone-start-content.backbone-end-breakout {
+    --right-spacing: var(--popout-breakout);
+}
+
+.backbone > .backbone-start-popout.backbone-end-content {
+    --left-spacing: var(--popout);
+}
+
+.backbone > .backbone-start-content.backbone-end-popout {
+    --right-spacing: var(--popout);
+}
