@@ -1,0 +1,23 @@
+{
+  "name": "b4ckbone",
+  "version": "0.0.1",
+  "description": "A powerful way to use CSS grid",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spicrd/b4ckbone.git"
+  },
+  "keywords": [
+    "css",
+    "grid"
+  ],
+  "author": "spicrd",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/spicrd/b4ckbone/issues"
+  },
+  "homepage": "https://github.com/spicrd/b4ckbone#readme"
+}
