@@ -23,66 +23,84 @@
     color: #020617;
 }
 
-.backbone > :not(.backbone-start-content, .backbone-end-content, .backbone-popout, .backbone-start-popout, .backbone-end-popout, .backbone-breakout, .backbone-start-breakout, .backbone-end-breakout, .backbone-full, .backbone-start-full, .backbone-end-full) {
+.backbone h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3rem;
+    color: #020617;
+}
+
+.backbone p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    color: #020617;
+}
+
+section {
+    margin: 0 !important;
+    padding: 20px 0;
+    background: #d1d5db;
+}
+
+.backbone > div:not(.backbone-start-content, .backbone-end-content, .backbone-popout, .backbone-start-popout, .backbone-end-popout, .backbone-breakout, .backbone-start-breakout, .backbone-end-breakout, .backbone-full, .backbone-start-full, .backbone-end-full) {
     background: var(--backbone-content-color);
 }
 
-.backbone > .backbone-popout {
+.backbone > div.backbone-popout {
     background: var(--backbone-popout-color);
 }
 
-.backbone > .backbone-breakout {
+.backbone > div.backbone-breakout {
     background: var(--backbone-breakout-color);
 }
 
-.backbone > .backbone-full {
+.backbone > div.backbone-full {
     background: var(--backbone-full-color);
 }
 
-.backbone > .backbone-start-full.backbone-end-content {
+.backbone > div.backbone-start-full.backbone-end-content {
     background: linear-gradient(90deg, var(--backbone-full-color) 0%, var(--backbone-full-color) 25%, var(--backbone-content-color) 75%, var(--backbone-content-color) 100%) ;
 }
 
-.backbone > .backbone-start-full.backbone-end-popout {
+.backbone > div.backbone-start-full.backbone-end-popout {
     background: linear-gradient(90deg, var(--backbone-full-color) 0%, var(--backbone-full-color) 25%, var(--backbone-popout-color) 75%, var(--backbone-popout-color) 100%) ;
 }
 
-.backbone > .backbone-start-full.backbone-end-breakout {
+.backbone > div.backbone-start-full.backbone-end-breakout {
     background: linear-gradient(90deg, var(--backbone-full-color) 0%, var(--backbone-full-color) 25%, var(--backbone-breakout-color) 75%, var(--backbone-breakout-color) 100%) ;
 }
 
-.backbone > .backbone-start-breakout.backbone-end-content {
+.backbone > div.backbone-start-breakout.backbone-end-content {
     background: linear-gradient(90deg, var(--backbone-breakout-color) 0%, var(--backbone-breakout-color) 25%, var(--backbone-content-color) 75%, var(--backbone-content-color) 100%) ;
 }
 
-.backbone > .backbone-start-breakout.backbone-end-popout {
+.backbone > div.backbone-start-breakout.backbone-end-popout {
     background: linear-gradient(90deg, var(--backbone-breakout-color) 0%, var(--backbone-breakout-color) 25%, var(--backbone-popout-color) 75%, var(--backbone-popout-color) 100%) ;
 }
 
-.backbone > .backbone-start-breakout.backbone-end-full {
+.backbone > div.backbone-start-breakout.backbone-end-full {
     background: linear-gradient(90deg, var(--backbone-breakout-color) 0%, var(--backbone-breakout-color) 25%, var(--backbone-full-color) 75%, var(--backbone-full-color) 100%) ;
 }
 
-.backbone > .backbone-start-popout.backbone-end-content {
+.backbone > div.backbone-start-popout.backbone-end-content {
     background: linear-gradient(90deg, var(--backbone-popout-color) 0%, var(--backbone-popout-color) 25%, var(--backbone-content-color) 75%, var(--backbone-content-color) 100%) ;
 }
 
-.backbone > .backbone-start-popout.backbone-end-breakout {
+.backbone > div.backbone-start-popout.backbone-end-breakout {
     background: linear-gradient(90deg, var(--backbone-popout-color) 0%, var(--backbone-popout-color) 25%, var(--backbone-breakout-color) 75%, var(--backbone-breakout-color) 100%) ;
 }
 
-.backbone > .backbone-start-popout.backbone-end-full {
+.backbone > div.backbone-start-popout.backbone-end-full {
     background: linear-gradient(90deg, var(--backbone-popout-color) 0%, var(--backbone-popout-color) 25%, var(--backbone-full-color) 75%, var(--backbone-full-color) 100%) ;
 }
 
-.backbone > .backbone-start-content.backbone-end-popout {
+.backbone > div.backbone-start-content.backbone-end-popout {
     background: linear-gradient(90deg, var(--backbone-content-color) 0%, var(--backbone-content-color) 25%, var(--backbone-popout-color) 75%, var(--backbone-popout-color) 100%) ;
 }
 
-.backbone > .backbone-start-content.backbone-end-breakout {
+.backbone > div.backbone-start-content.backbone-end-breakout {
     background: linear-gradient(90deg, var(--backbone-content-color) 0%, var(--backbone-content-color) 25%, var(--backbone-breakout-color) 75%, var(--backbone-breakout-color) 100%) ;
 }
 
-.backbone > .backbone-start-content.backbone-end-full {
-    background: linear-gradient(90deg, var(--backbone-content-color) 0%, var(--backbone-content-color) 25%, var(--backbone-full-color) 75%, var(--backbone-full-color) 100%) ;
+.backbone > div.backbone-start-content.backbone-end-full {
+    background: linear-gradient(90deg, var(--backbone-content-color) 0%, var(--backbone-content-color) 25%, var(--backbone-full-color) 75%, var(--backbone-full-color) 100%);
 }
