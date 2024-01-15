@@ -11,8 +11,10 @@
     var(--edge) [edge-end];
 }
 
-.b4ckbone > :not(.start-content, .end-content, .popout, .start-popout, .end-popout, .breakout, .start-breakout, .end-breakout, .full, .start-edge, .end-edge),
-.b4ckbone .full > :not(.start-content, .end-content, .popout, .start-popout, .end-popout, .breakout, .start-breakout, .end-breakout, .full, .start-edge, .end-edge) {
+.b4ckbone > :not(.content, .start-content, .end-content, .popout, .start-popout, .end-popout, .breakout, .start-breakout, .end-breakout, .full, .start-edge, .end-edge),
+.b4ckbone > .content,
+.b4ckbone .full > :not(.content, .start-content, .end-content, .popout, .start-popout, .end-popout, .breakout, .start-breakout, .end-breakout, .full, .start-edge, .end-edge),
+.b4ckbone .full > .content {
     grid-column: content;
     justify-self: center;
     width: 100%;
