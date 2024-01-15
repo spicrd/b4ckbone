@@ -1,94 +1,82 @@
 .b4ckbone > :not(.full),
 .b4ckbone > .full > * {
-    --popout-breakout: calc(var(--popout) + var(--breakout));
-    --popout-breakout-edge: calc(var(--popout) + var(--breakout) + var(--edge));
-    --remaining-space: calc((100% - var(--left-spacing, 0rem) - var(--right-spacing, 0rem) - var(--content-max-width)) / 2);
-    --b4ckbone-spacing-left: max(var(--left-spacing, 0rem), var(--left-spacing, 0rem) + var(--remaining-space));
-    --b4ckbone-spacing-right: max(var(--right-spacing, 0rem), var(--right-spacing, 0rem) + var(--remaining-space));
+    --popout-without-content: var(--popout);
+    --breakout-without-content: calc(var(--breakout) + var(--popout));
+    --edge-without-content: calc(var(--edge) + var(--breakout) + var(--popout));
+
+    --content-spacing: calc((100% - var(--left-without-content, 0rem) - var(--right-without-content, 0rem) - var(--content-max-width)) / 2);
+
+    --popout-spacing: max(var(--popout-without-content), var(--popout-without-content) + var(--content-spacing));
+    --breakout-spacing: max(var(--breakout-without-content), var(--breakout-without-content) + var(--content-spacing));
+    --edge-spacing: max(var(--edge-without-content), var(--edge-without-content) + var(--content-spacing));
 }
 
 .b4ckbone.centered > :not(.full),
 .b4ckbone > .centered:not(.full),
 .b4ckbone > .full.centered > *,
 .b4ckbone > .full > .centered {
-    padding-left: var(--b4ckbone-spacing-left) !important;
-    padding-right: var(--b4ckbone-spacing-right) !important;
+    padding-left: var(--left-spacing) !important;
+    padding-right: var(--right-spacing) !important;
+}
+
+.b4ckbone > .start-content,
+.b4ckbone > .full > .start-content {
+    margin-left: max(var(--left-spacing, 0rem), var(--left-spacing, 0rem) + var(--content-spacing));
+}
+
+.b4ckbone > .end-content,
+.b4ckbone > .full > .end-content {
+    margin-right: max(var(--right-spacing, 0rem), var(--right-spacing, 0rem) + var(--content-spacing));
 }
 
 .b4ckbone > .popout,
 .b4ckbone > .full > .popout {
-    --left-spacing: var(--popout);
-    --right-spacing: var(--popout);
+    --left-without-content: var(--popout-without-content);
+    --right-without-content: var(--popout-without-content);
+    --left-spacing: var(--popout-spacing);
+    --right-spacing: var(--popout-spacing);
+}
+
+.b4ckbone > .start-popout,
+.b4ckbone > .full > .start-popout {
+    --left-without-content: var(--popout-without-content);
+    --left-spacing: var(--popout-spacing);
+}
+
+.b4ckbone > .end-popout,
+.b4ckbone > .full > .end-popout {
+    --right-without-content: var(--popout-without-content);
+    --right-spacing: var(--popout-spacing);
 }
 
 .b4ckbone > .breakout,
 .b4ckbone > .full > .breakout {
-    --left-spacing: var(--popout-breakout);
-    --right-spacing: var(--popout-breakout);
+    --left-without-content: var(--breakout-without-content);
+    --right-without-content: var(--breakout-without-content);
+    --left-spacing: var(--breakout-spacing);
+    --right-spacing: var(--breakout-spacing);
 }
 
-.b4ckbone > .start-edge.end-content,
-.b4ckbone > .full > .start-edge.end-content {
-    --left-spacing: var(--popout-breakout-edge);
+.b4ckbone > .start-breakout,
+.b4ckbone > .full > .start-breakout {
+    --left-without-content: var(--breakout-without-content);
+    --left-spacing: var(--breakout-spacing);
 }
 
-.b4ckbone > .start-edge.end-popout,
-.b4ckbone > .full > .start-edge.end-popout {
-    --left-spacing: var(--popout-breakout-edge);
-    --right-spacing: var(--popout);
+.b4ckbone > .end-breakout,
+.b4ckbone > .full > .end-breakout {
+    --right-without-content: var(--breakout-without-content);
+    --right-spacing: var(--breakout-spacing);
 }
 
-.b4ckbone > .start-edge.end-breakout,
-.b4ckbone > .full > .start-edge.end-breakout {
-    --left-spacing: var(--popout-breakout-edge);
-    --right-spacing: var(--popout-breakout);
+.b4ckbone > .start-edge,
+.b4ckbone > .full > .start-edge {
+    --left-without-content: var(--edge-without-content);
+    --left-spacing: var(--edge-spacing);
 }
 
-.b4ckbone > .start-breakout.end-edge,
-.b4ckbone > .full > .start-breakout.end-edge {
-    --left-spacing: var(--popout-breakout);
-    --right-spacing: var(--popout-breakout-edge);
-}
-
-.b4ckbone > .start-popout.end-edge,
-.b4ckbone > .full > .start-popout.end-edge {
-    --left-spacing: var(--popout);
-    --right-spacing: var(--popout-breakout-edge);
-}
-
-.b4ckbone > .start-content.end-edge,
-.b4ckbone > .full > .start-content.end-edge {
-    --right-spacing: var(--popout-breakout-edge);
-}
-
-.b4ckbone > .start-breakout.end-content,
-.b4ckbone > .full > .start-breakout.end-content {
-    --left-spacing: var(--popout-breakout);
-}
-
-.b4ckbone > .start-breakout.end-popout,
-.b4ckbone > .full > .start-breakout.end-popout {
-    --left-spacing: var(--popout-breakout);
-    --right-spacing: var(--popout);
-}
-
-.b4ckbone > .start-popout.end-breakout,
-.b4ckbone > .full > .start-popout.end-breakout {
-    --left-spacing: var(--popout);
-    --right-spacing: var(--popout-breakout);
-}
-
-.b4ckbone > .start-content.end-breakout,
-.b4ckbone > .full > .start-content.end-breakout {
-    --right-spacing: var(--popout-breakout);
-}
-
-.b4ckbone > .start-popout.end-content,
-.b4ckbone > .full > .start-popout.end-content {
-    --left-spacing: var(--popout);
-}
-
-.b4ckbone > .start-content.end-popout,
-.b4ckbone > .full > .start-content.end-popout {
-    --right-spacing: var(--popout);
+.b4ckbone > .end-edge,
+.b4ckbone > .full > .end-edge {
+    --right-without-content: var(--edge-without-content);
+    --right-spacing: var(--edge-spacing);
 }
