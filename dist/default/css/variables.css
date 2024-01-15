@@ -1,8 +1,8 @@
 .b4ckbone {
     --content-max-width: 80rem;
     --edge: 1rem;
-    --breakout: 0;
-    --popout: 0;
+    --breakout: 0rem;
+    --popout: 0rem;
 }
 
 @media (min-width: 768px) {
