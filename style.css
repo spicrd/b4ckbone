@@ -51,7 +51,7 @@ section {
 }
 
 /* Cells color */
-.b4ckbone > div:not(.start-content, .end-content, .popout, .start-popout, .end-popout, .breakout, .start-breakout, .end-breakout, .edge, .start-edge, .end-edge) {
+.b4ckbone > div:not(.start-content, .end-content, .popout, .start-popout, .end-popout, .breakout, .start-breakout, .end-breakout, .full, .start-edge, .end-edge) {
     background: var(--content-color);
 }
 
@@ -63,7 +63,7 @@ section {
     background: var(--breakout-color);
 }
 
-.b4ckbone > div.edge {
+.b4ckbone > div.full {
     background: var(--edge-color);
 }
 
