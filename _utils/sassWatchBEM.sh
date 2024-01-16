@@ -1,0 +1,1 @@
+sass --watch ../dist/bem/scss/bundle.scss:../dist/bem/css/bundle.css
