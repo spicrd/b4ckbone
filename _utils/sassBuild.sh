@@ -1,0 +1,1 @@
+sass ../dist/default/scss/bundle.scss ../dist/default/css/bundle.min.css --style compressed
