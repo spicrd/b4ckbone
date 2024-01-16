@@ -12,4 +12,18 @@
     @media (min-width: 1024px) {
         --popout: max(1rem, 6vw);
     }
+
+    /* Spacing variables */
+    & > :not(.full),
+    & > .full > * {
+        --popout-without-content: var(--popout);
+        --breakout-without-content: calc(var(--breakout) + var(--popout));
+        --edge-without-content: calc(var(--edge) + var(--breakout) + var(--popout));
+    
+        --content-spacing: calc((100% - var(--left-without-content, 0rem) - var(--right-without-content, 0rem) - var(--content-max-width)) / 2);
+    
+        --popout-spacing: max(var(--popout-without-content), var(--popout-without-content) + var(--content-spacing));
+        --breakout-spacing: max(var(--breakout-without-content), var(--breakout-without-content) + var(--content-spacing));
+        --edge-spacing: max(var(--edge-without-content), var(--edge-without-content) + var(--content-spacing));
+    }
 }
