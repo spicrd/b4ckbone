@@ -3,17 +3,13 @@
     --edge: 1rem;
     --breakout: 0rem;
     --popout: 0rem;
-}
 
-@media (min-width: 768px) {
-    .b4ckbone {
+    @media (min-width: 768px) {
         --breakout: max(1rem, 6vw);
         --edge: clamp(1rem, 6vw, 5rem);
     }
-}
 
-@media (min-width: 1024px) {
-    .b4ckbone {
+    @media (min-width: 1024px) {
         --popout: max(1rem, 6vw);
     }
 }

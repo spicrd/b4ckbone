@@ -1,0 +1,66 @@
+.b4ckbone {
+    &,
+    & > .full {
+        display: grid;
+        grid-template-columns: 
+        [edge-start] var(--edge)
+        [breakout-start] var(--breakout)
+        [popout-start] var(--popout)
+        [content-start] 1fr [content-end]
+        var(--popout) [popout-end]
+        var(--breakout) [breakout-end]
+        var(--edge) [edge-end];
+
+        & > :not(.content, .start-content, .end-content, .popout, .start-popout, .end-popout, .breakout, .start-breakout, .end-breakout, .full, .start-edge, .end-edge),
+        & > .content {
+            grid-column: content;
+            justify-self: center;
+            width: 100%;
+            max-width: var(--content-max-width);
+        }
+
+        & > .start-content {
+            grid-column-start: content;
+        }
+
+        & > .end-content {
+            grid-column-end: content;
+        }
+
+        & > .popout {
+            grid-column: popout;
+        }
+
+        & > .start-popout {
+            grid-column-start: popout;
+        }
+
+        & > .end-popout {
+            grid-column-end: popout;
+        }
+
+        & > .breakout {
+            grid-column: breakout;
+        }
+
+        & > .start-breakout {
+            grid-column-start: breakout;
+        }
+
+        & > .end-breakout {
+            grid-column-end: breakout;
+        }
+
+        & > .start-edge {
+            grid-column-start: edge;
+        }
+
+        & > .end-edge {
+            grid-column-end: edge;
+        }
+    }
+
+    & > .full {
+        grid-column: edge;
+    }
+}
