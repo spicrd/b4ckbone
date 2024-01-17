@@ -51,84 +51,67 @@ section {
 }
 
 /* Cells color */
-.b4ckbone > div:not(.start-content, .end-content, .popout, .start-popout, .end-popout, .breakout, .start-breakout, .end-breakout, .full, .start-edge, .end-edge),
-.content,
-.b4ckbone > div:not(.b4ckbone__col--content, .b4ckbone__col--start-content, .b4ckbone__col--end-content, .b4ckbone__col--popout, .b4ckbone__col--start-popout, .b4ckbone__col--end-popout, .b4ckbone__col--breakout, .b4ckbone__col--start-breakout, .b4ckbone__col--end-breakout, .b4ckbone__col--full, .b4ckbone__col--start-edge, .b4ckbone__col--end-edge),
-.b4ckbone__col--content {
+.b4ckbone > div:not(.content-start, .content-end, .popout, .popout-start, .popout-end, .breakout, .breakout-start, .breakout-end, .full, .edge-start, .edge-end),
+.content {
     background: var(--content-color);
 }
 
-.b4ckbone > div.popout,
-.b4ckbone > div.b4ckbone__col--popout {
+.b4ckbone > div.popout {
     background: var(--popout-color);
 }
 
-.b4ckbone > div.breakout,
-.b4ckbone > div.b4ckbone__col--breakout {
+.b4ckbone > div.breakout {
     background: var(--breakout-color);
 }
 
-.b4ckbone > div.full,
-.b4ckbone > div.b4ckbone__col--full {
+.b4ckbone > div.full {
     background: var(--edge-color);
 }
 
-.b4ckbone > div.start-edge.end-content,
-.b4ckbone > div.b4ckbone__col--start-edge.b4ckbone__col--end-content {
+.b4ckbone > div.edge-start.content-end {
     background: linear-gradient(90deg, var(--edge-color) 0%, var(--edge-color) 25%, var(--content-color) 75%, var(--content-color) 100%) ;
 }
 
-.b4ckbone > div.start-edge.end-popout,
-.b4ckbone > div.b4ckbone__col--start-edge.b4ckbone__col--end-popout {
+.b4ckbone > div.edge-start.popout-end {
     background: linear-gradient(90deg, var(--edge-color) 0%, var(--edge-color) 25%, var(--popout-color) 75%, var(--popout-color) 100%) ;
 }
 
-.b4ckbone > div.start-edge.end-breakout,
-.b4ckbone > div.b4ckbone__col--start-edge.b4ckbone__col--end-breakout {
+.b4ckbone > div.edge-start.breakout-end {
     background: linear-gradient(90deg, var(--edge-color) 0%, var(--edge-color) 25%, var(--breakout-color) 75%, var(--breakout-color) 100%) ;
 }
 
-.b4ckbone > div.start-breakout.end-content,
-.b4ckbone > div.b4ckbone__col--start-breakout.b4ckbone__col--end-content {
+.b4ckbone > div.breakout-start.content-end {
     background: linear-gradient(90deg, var(--breakout-color) 0%, var(--breakout-color) 25%, var(--content-color) 75%, var(--content-color) 100%) ;
 }
 
-.b4ckbone > div.start-breakout.end-popout,
-.b4ckbone > div.b4ckbone__col--start-breakout.b4ckbone__col--end-popout {
+.b4ckbone > div.breakout-start.popout-end {
     background: linear-gradient(90deg, var(--breakout-color) 0%, var(--breakout-color) 25%, var(--popout-color) 75%, var(--popout-color) 100%) ;
 }
 
-.b4ckbone > div.start-breakout.end-edge,
-.b4ckbone > div.b4ckbone__col--start-breakout.b4ckbone__col--end-edge {
+.b4ckbone > div.breakout-start.edge-end {
     background: linear-gradient(90deg, var(--breakout-color) 0%, var(--breakout-color) 25%, var(--edge-color) 75%, var(--edge-color) 100%) ;
 }
 
-.b4ckbone > div.start-popout.end-content,
-.b4ckbone > div.b4ckbone__col--start-popout.b4ckbone__col--end-content {
+.b4ckbone > div.popout-start.content-end {
     background: linear-gradient(90deg, var(--popout-color) 0%, var(--popout-color) 25%, var(--content-color) 75%, var(--content-color) 100%) ;
 }
 
-.b4ckbone > div.start-popout.end-breakout,
-.b4ckbone > div.b4ckbone__col--start-popout.b4ckbone__col--end-breakout {
+.b4ckbone > div.popout-start.breakout-end {
     background: linear-gradient(90deg, var(--popout-color) 0%, var(--popout-color) 25%, var(--breakout-color) 75%, var(--breakout-color) 100%) ;
 }
 
-.b4ckbone > div.start-popout.end-edge,
-.b4ckbone > div.b4ckbone__col--start-popout.b4ckbone__col--end-edge {
+.b4ckbone > div.popout-start.edge-end {
     background: linear-gradient(90deg, var(--popout-color) 0%, var(--popout-color) 25%, var(--edge-color) 75%, var(--edge-color) 100%) ;
 }
 
-.b4ckbone > div.start-content.end-popout,
-.b4ckbone > div.b4ckbone__col--start-content.b4ckbone__col--end-popout {
+.b4ckbone > div.content-start.popout-end {
     background: linear-gradient(90deg, var(--content-color) 0%, var(--content-color) 25%, var(--popout-color) 75%, var(--popout-color) 100%) ;
 }
 
-.b4ckbone > div.start-content.end-breakout,
-.b4ckbone > div.b4ckbone__col--start-content.b4ckbone__col--end-breakout {
+.b4ckbone > div.content-start.breakout-end {
     background: linear-gradient(90deg, var(--content-color) 0%, var(--content-color) 25%, var(--breakout-color) 75%, var(--breakout-color) 100%) ;
 }
 
-.b4ckbone > div.start-content.end-edge,
-.b4ckbone > div.b4ckbone__col--start-content.b4ckbone__col--end-edge {
+.b4ckbone > div.content-start.edge-end {
     background: linear-gradient(90deg, var(--content-color) 0%, var(--content-color) 25%, var(--edge-color) 75%, var(--edge-color) 100%);
 }

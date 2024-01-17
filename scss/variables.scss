@@ -1,0 +1,37 @@
+$selector: '.b4ckbone';
+$fullSelector: '.full';
+$centeredSelector: '.centered';
+
+$col1: 'edge';
+$col2: 'breakout';
+$col3: 'popout';
+$middle: 'content';
+
+$middleSelector: '.#{$middle}';
+$middleSelectorStart: '.#{$middle}-start';
+$middleSelectorEnd: '.#{$middle}-end';
+$col1SelectorStart: '.#{$col1}-start';
+$col1SelectorEnd: '.#{$col1}-end';
+$col2Selector: '.#{$col2}';
+$col2SelectorStart: '.#{$col2}-start';
+$col2SelectorEnd: '.#{$col2}-end';
+$col3Selector: '.#{$col3}';
+$col3SelectorStart: '.#{$col3}-start';
+$col3SelectorEnd: '.#{$col3}-end';
+
+
+#{$selector} {
+    --#{$middle}-max-width: 80rem;
+    --#{$col1}: 1rem;
+    --#{$col2}: 0rem;
+    --#{$col3}: 0rem;
+
+    @media (min-width: 768px) {
+        --#{$col2}: max(1rem, 6vw);
+        --#{$col1}: clamp(1rem, 6vw, 5rem);
+    }
+
+    @media (min-width: 1024px) {
+        --#{$col3}: max(1rem, 6vw);
+    }
+}

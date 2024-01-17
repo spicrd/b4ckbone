@@ -3,7 +3,6 @@
   --edge: 1rem;
   --breakout: 0rem;
   --popout: 0rem;
-  /* Spacing variables */
 }
 @media (min-width: 768px) {
   .b4ckbone {
@@ -16,6 +15,7 @@
     --popout: max(1rem, 6vw);
   }
 }
+
 .b4ckbone > :not(.full), .b4ckbone > .full > * {
   --popout-without-content: var(--popout);
   --breakout-without-content: calc(var(--breakout) + var(--popout));
@@ -25,22 +25,21 @@
   --breakout-spacing: max(var(--breakout-without-content), var(--breakout-without-content) + var(--content-spacing));
   --edge-spacing: max(var(--edge-without-content), var(--edge-without-content) + var(--content-spacing));
 }
-
 .b4ckbone, .b4ckbone > .full {
   display: grid;
   grid-template-columns: [edge-start] var(--edge) [breakout-start] var(--breakout) [popout-start] var(--popout) [content-start] 1fr [content-end] var(--popout) [popout-end] var(--breakout) [breakout-end] var(--edge) [edge-end];
 }
-.b4ckbone > :not(.content, .start-content, .end-content, .popout, .start-popout, .end-popout, .breakout, .start-breakout, .end-breakout, .full, .start-edge, .end-edge), .b4ckbone > .content, .b4ckbone > .full > :not(.content, .start-content, .end-content, .popout, .start-popout, .end-popout, .breakout, .start-breakout, .end-breakout, .full, .start-edge, .end-edge), .b4ckbone > .full > .content {
+.b4ckbone > :not(.content, .content-start, .content-end, .popout, .popout-start, .popout-end, .breakout, .breakout-start, .breakout-end, .full, .edge-start, .edge-end), .b4ckbone > .content, .b4ckbone > .full > :not(.content, .content-start, .content-end, .popout, .popout-start, .popout-end, .breakout, .breakout-start, .breakout-end, .full, .edge-start, .edge-end), .b4ckbone > .full > .content {
   grid-column: content;
   justify-self: center;
   width: 100%;
   max-width: var(--content-max-width);
 }
-.b4ckbone > .start-content, .b4ckbone > .full > .start-content {
+.b4ckbone > .content-start, .b4ckbone > .full > .content-start {
   grid-column-start: content;
   margin-left: max(var(--left-spacing, 0rem), var(--left-spacing, 0rem) + var(--content-spacing));
 }
-.b4ckbone > .end-content, .b4ckbone > .full > .end-content {
+.b4ckbone > .content-end, .b4ckbone > .full > .content-end {
   grid-column-end: content;
   margin-right: max(var(--right-spacing, 0rem), var(--right-spacing, 0rem) + var(--content-spacing));
 }
@@ -51,12 +50,12 @@
   --left-spacing: var(--popout-spacing);
   --right-spacing: var(--popout-spacing);
 }
-.b4ckbone > .start-popout, .b4ckbone > .full > .start-popout {
+.b4ckbone > .popout-start, .b4ckbone > .full > .popout-start {
   grid-column-start: popout;
   --left-without-content: var(--popout-without-content);
   --left-spacing: var(--popout-spacing);
 }
-.b4ckbone > .end-popout, .b4ckbone > .full > .end-popout {
+.b4ckbone > .popout-end, .b4ckbone > .full > .popout-end {
   grid-column-end: popout;
   --right-without-content: var(--popout-without-content);
   --right-spacing: var(--popout-spacing);
@@ -68,22 +67,22 @@
   --left-spacing: var(--breakout-spacing);
   --right-spacing: var(--breakout-spacing);
 }
-.b4ckbone > .start-breakout, .b4ckbone > .full > .start-breakout {
+.b4ckbone > .breakout-start, .b4ckbone > .full > .breakout-start {
   grid-column-start: breakout;
   --left-without-content: var(--breakout-without-content);
   --left-spacing: var(--breakout-spacing);
 }
-.b4ckbone > .end-breakout, .b4ckbone > .full > .end-breakout {
+.b4ckbone > .breakout-end, .b4ckbone > .full > .breakout-end {
   grid-column-end: breakout;
   --right-without-content: var(--breakout-without-content);
   --right-spacing: var(--breakout-spacing);
 }
-.b4ckbone > .start-edge, .b4ckbone > .full > .start-edge {
+.b4ckbone > .edge-start, .b4ckbone > .full > .edge-start {
   grid-column-start: edge;
   --left-without-content: var(--edge-without-content);
   --left-spacing: var(--edge-spacing);
 }
-.b4ckbone > .end-edge, .b4ckbone > .full > .end-edge {
+.b4ckbone > .edge-end, .b4ckbone > .full > .edge-end {
   grid-column-end: edge;
   --right-without-content: var(--edge-without-content);
   --right-spacing: var(--edge-spacing);
