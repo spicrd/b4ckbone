@@ -16,7 +16,7 @@
   }
 }
 
-.b4ckbone > :not(.full), .b4ckbone > .full > * {
+.b4ckbone > :not(.full), .b4ckbone .full > * {
   --popout-without-content: var(--popout);
   --breakout-without-content: calc(var(--breakout) + var(--popout));
   --edge-without-content: calc(var(--edge) + var(--breakout) + var(--popout));
@@ -90,7 +90,7 @@
 .b4ckbone > :not(.content, .content-start, .content-end, .popout, .popout-start, .popout-end, .breakout, .breakout-start, .breakout-end, .edge-start, .edge-end), .b4ckbone .full {
   grid-column: edge;
 }
-.b4ckbone.centered > :not(.full), .b4ckbone > .centered:not(.full), .b4ckbone .full.centered > *, .b4ckbone .full > .centered {
+.b4ckbone.centered > :not(.full), .b4ckbone > .centered:not(.full), .b4ckbone.centered .full > *, .b4ckbone .full.centered > *, .b4ckbone .full > .centered {
   padding-left: var(--left-spacing);
   padding-right: var(--right-spacing);
 }

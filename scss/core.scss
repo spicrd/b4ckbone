@@ -2,7 +2,7 @@
 
 #{$selector} {
     & > :not(#{$fullSelector}),
-    & > #{$fullSelector} > * {
+    & #{$fullSelector} > * {
         --#{$col3}-without-#{$middle}: var(--#{$col3});
         --#{$col2}-without-#{$middle}: calc(var(--#{$col2}) + var(--#{$col3}));
         --#{$col1}-without-#{$middle}: calc(var(--#{$col1}) + var(--#{$col2}) + var(--#{$col3}));
@@ -103,6 +103,7 @@
 
     &#{$centeredSelector} > :not(#{$fullSelector}),
     & > #{$centeredSelector}:not(#{$fullSelector}),
+    &#{$centeredSelector} #{$fullSelector} > *,
     & #{$fullSelector}#{$centeredSelector} > *,
     & #{$fullSelector} > #{$centeredSelector} {
         padding-left: var(--left-spacing);
