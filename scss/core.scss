@@ -15,7 +15,7 @@
     }
 
     &,
-    & > #{$fullSelector} {
+    & #{$fullSelector} {
         display: grid;
         grid-template-columns: 
         [#{$col1}-start] var(--#{$col1})
@@ -26,7 +26,6 @@
         var(--#{$col2}) [#{$col2}-end]
         var(--#{$col1}) [#{$col1}-end];
 
-        & > :not(#{$middleSelector}, #{$middleSelectorStart}, #{$middleSelectorEnd}, #{$col3Selector}, #{$col3SelectorStart}, #{$col3SelectorEnd}, #{$col2Selector}, #{$col2SelectorStart}, #{$col2SelectorEnd}, #{$fullSelector}, #{$col1SelectorStart}, #{$col1SelectorEnd}),
         & > #{$middleSelector} {
             grid-column: #{$middle};
             justify-self: center;
@@ -97,14 +96,15 @@
         }
     }
 
-    & > #{$fullSelector} {
+    & > :not(#{$middleSelector}, #{$middleSelectorStart}, #{$middleSelectorEnd}, #{$col3Selector}, #{$col3SelectorStart}, #{$col3SelectorEnd}, #{$col2Selector}, #{$col2SelectorStart}, #{$col2SelectorEnd}, #{$col1SelectorStart}, #{$col1SelectorEnd}),
+    & #{$fullSelector} {
         grid-column: #{$col1};
     }
 
     &#{$centeredSelector} > :not(#{$fullSelector}),
     & > #{$centeredSelector}:not(#{$fullSelector}),
-    & > #{$fullSelector}#{$centeredSelector} > *,
-    & > #{$fullSelector} > #{$centeredSelector} {
+    & #{$fullSelector}#{$centeredSelector} > *,
+    & #{$fullSelector} > #{$centeredSelector} {
         padding-left: var(--left-spacing);
         padding-right: var(--right-spacing);
     }

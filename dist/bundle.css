@@ -25,72 +25,72 @@
   --breakout-spacing: max(var(--breakout-without-content), var(--breakout-without-content) + var(--content-spacing));
   --edge-spacing: max(var(--edge-without-content), var(--edge-without-content) + var(--content-spacing));
 }
-.b4ckbone, .b4ckbone > .full {
+.b4ckbone, .b4ckbone .full {
   display: grid;
   grid-template-columns: [edge-start] var(--edge) [breakout-start] var(--breakout) [popout-start] var(--popout) [content-start] 1fr [content-end] var(--popout) [popout-end] var(--breakout) [breakout-end] var(--edge) [edge-end];
 }
-.b4ckbone > :not(.content, .content-start, .content-end, .popout, .popout-start, .popout-end, .breakout, .breakout-start, .breakout-end, .full, .edge-start, .edge-end), .b4ckbone > .content, .b4ckbone > .full > :not(.content, .content-start, .content-end, .popout, .popout-start, .popout-end, .breakout, .breakout-start, .breakout-end, .full, .edge-start, .edge-end), .b4ckbone > .full > .content {
+.b4ckbone > .content, .b4ckbone .full > .content {
   grid-column: content;
   justify-self: center;
   width: 100%;
   max-width: var(--content-max-width);
 }
-.b4ckbone > .content-start, .b4ckbone > .full > .content-start {
+.b4ckbone > .content-start, .b4ckbone .full > .content-start {
   grid-column-start: content;
   margin-left: max(var(--left-spacing, 0rem), var(--left-spacing, 0rem) + var(--content-spacing));
 }
-.b4ckbone > .content-end, .b4ckbone > .full > .content-end {
+.b4ckbone > .content-end, .b4ckbone .full > .content-end {
   grid-column-end: content;
   margin-right: max(var(--right-spacing, 0rem), var(--right-spacing, 0rem) + var(--content-spacing));
 }
-.b4ckbone > .popout, .b4ckbone > .full > .popout {
+.b4ckbone > .popout, .b4ckbone .full > .popout {
   grid-column: popout;
   --left-without-content: var(--popout-without-content);
   --right-without-content: var(--popout-without-content);
   --left-spacing: var(--popout-spacing);
   --right-spacing: var(--popout-spacing);
 }
-.b4ckbone > .popout-start, .b4ckbone > .full > .popout-start {
+.b4ckbone > .popout-start, .b4ckbone .full > .popout-start {
   grid-column-start: popout;
   --left-without-content: var(--popout-without-content);
   --left-spacing: var(--popout-spacing);
 }
-.b4ckbone > .popout-end, .b4ckbone > .full > .popout-end {
+.b4ckbone > .popout-end, .b4ckbone .full > .popout-end {
   grid-column-end: popout;
   --right-without-content: var(--popout-without-content);
   --right-spacing: var(--popout-spacing);
 }
-.b4ckbone > .breakout, .b4ckbone > .full > .breakout {
+.b4ckbone > .breakout, .b4ckbone .full > .breakout {
   grid-column: breakout;
   --left-without-content: var(--breakout-without-content);
   --right-without-content: var(--breakout-without-content);
   --left-spacing: var(--breakout-spacing);
   --right-spacing: var(--breakout-spacing);
 }
-.b4ckbone > .breakout-start, .b4ckbone > .full > .breakout-start {
+.b4ckbone > .breakout-start, .b4ckbone .full > .breakout-start {
   grid-column-start: breakout;
   --left-without-content: var(--breakout-without-content);
   --left-spacing: var(--breakout-spacing);
 }
-.b4ckbone > .breakout-end, .b4ckbone > .full > .breakout-end {
+.b4ckbone > .breakout-end, .b4ckbone .full > .breakout-end {
   grid-column-end: breakout;
   --right-without-content: var(--breakout-without-content);
   --right-spacing: var(--breakout-spacing);
 }
-.b4ckbone > .edge-start, .b4ckbone > .full > .edge-start {
+.b4ckbone > .edge-start, .b4ckbone .full > .edge-start {
   grid-column-start: edge;
   --left-without-content: var(--edge-without-content);
   --left-spacing: var(--edge-spacing);
 }
-.b4ckbone > .edge-end, .b4ckbone > .full > .edge-end {
+.b4ckbone > .edge-end, .b4ckbone .full > .edge-end {
   grid-column-end: edge;
   --right-without-content: var(--edge-without-content);
   --right-spacing: var(--edge-spacing);
 }
-.b4ckbone > .full {
+.b4ckbone > :not(.content, .content-start, .content-end, .popout, .popout-start, .popout-end, .breakout, .breakout-start, .breakout-end, .edge-start, .edge-end), .b4ckbone .full {
   grid-column: edge;
 }
-.b4ckbone.centered > :not(.full), .b4ckbone > .centered:not(.full), .b4ckbone > .full.centered > *, .b4ckbone > .full > .centered {
+.b4ckbone.centered > :not(.full), .b4ckbone > .centered:not(.full), .b4ckbone .full.centered > *, .b4ckbone .full > .centered {
   padding-left: var(--left-spacing);
   padding-right: var(--right-spacing);
 }

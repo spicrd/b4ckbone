@@ -56,7 +56,7 @@ section {
 
 /* Cells color */
 .b4ckbone > div:not(.content-start, .content-end, .popout, .popout-start, .popout-end, .breakout, .breakout-start, .breakout-end, .full, .edge-start, .edge-end),
-.content {
+.b4ckbone > div.content {
     background: var(--content-color);
 }
 
