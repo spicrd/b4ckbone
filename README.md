@@ -69,7 +69,6 @@ or in the `bundle.css` file:
 In the HTML, you need to add a tag with the class `b4ckbone` (or one of your choice if you changed the selector variable) and add the column classes to setup your elements in the layout.
 ```html
 <div class="b4ckbone">
-    <div>Content</div>
     <div class="content">Content</div>
     <div class="popout">Popout</div>
     <div class="breakout">Breakout</div>
