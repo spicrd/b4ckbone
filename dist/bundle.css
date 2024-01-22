@@ -6,11 +6,15 @@
 }
 @media (min-width: 768px) {
   .b4ckbone {
-    --breakout: max(1rem, 6vw);
     --edge: clamp(1rem, 6vw, 5rem);
   }
 }
 @media (min-width: 1024px) {
+  .b4ckbone {
+    --breakout: max(1rem, 6vw);
+  }
+}
+@media (min-width: 1280px) {
   .b4ckbone {
     --popout: max(1rem, 6vw);
   }
