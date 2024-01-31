@@ -83,4 +83,4 @@ There is a full example in the example folder.
 Add support with tailwind coming soon!
 
 ## Shout-out
-B4ckbone was inspired by this [Youtube video](https://youtu.be/c13gpBrnGEw?si=Glp5qkXwMVw_3Sje) from [Kevin Powell](https://www.youtube.com/@KevinPowell)
+B4ckbone was inspired by this [Youtube video](https://youtu.be/c13gpBrnGEw?si=Glp5qkXwMVw_3Sje) from [Kevin Powell](https://www.youtube.com/@KevinPowell).
