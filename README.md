@@ -1,5 +1,5 @@
 # B4ckbone
-A powerful way to use CSS grid.
+A powerful way to use CSS grid!
 
 ## What is it?
 B4ckbone is another method to create a page layout instead of the traditional container / wrapper.
