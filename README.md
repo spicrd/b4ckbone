@@ -79,8 +79,11 @@ In the HTML, you need to add a tag with the class `b4ckbone` (or one of your cho
 ```
 There is a full example in the example folder.
 
+## Tailwind
+B4ckbone can be added as a utility plugin in Tailwind CSS!
+
 ## Roadmap
-Add support with tailwind coming soon!
+Nothing for now!
 
 ## Shout-out
 B4ckbone was inspired by this [Youtube video](https://youtu.be/c13gpBrnGEw?si=Glp5qkXwMVw_3Sje) from [Kevin Powell](https://www.youtube.com/@KevinPowell).
