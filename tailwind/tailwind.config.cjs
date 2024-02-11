@@ -36,14 +36,14 @@ module.exports = {
 					[`--${col1}`]: '1rem',
 					[`--${col2}`]: '0rem',
 					[`--${col3}`]: '0rem',
-					'@media (min-width: 30rem)': {
-						[`--${col1}`]: 'var(--spacing-22-80)',
+					'@media (min-width: 768px)': {
+						[`--${col1}`]: 'clamp(1rem, 6vw, 5rem)',
 					},
-					'@media (min-width: 64rem)': {
-						[`--${col2}`]: 'var(--spacing-22-100)',
+					'@media (min-width: 1024px)': {
+						[`--${col2}`]: 'max(1rem, 6vw)',
 					},
-					'@media (min-width: 80rem)': {
-						[`--${col3}`]: 'var(--spacing-22-140)',
+					'@media (min-width: 1280px)': {
+						[`--${col3}`]: 'max(1rem, 6vw)',
 					},
 					[`& > :not(${fullSelector}), & ${fullSelector} > *`]: {
 						[`--${col3}-without-${middle}`]: `var(--${col3})`,
